@@ -20,9 +20,22 @@ Also note, after a bit research, I've decided to use `uv` for dependency managem
    cd nano01_course02_classify_pet_images
    ```
 
-2. Install the package and its dependencies:
+2. (Optional) Create and activate a virtual environment to isolate dependencies:
+   ```bash
+   python -m venv .venv
+   source .venv/bin/activate  # On Windows: .venv\Scripts\activate
+   ```
+
+3. Install the package and its dependencies:
+
+   **Using pip (recommended):**
    ```bash
    pip install .
    ```
 
-   This will automatically install `ai-common` from GitHub as declared in `pyproject.toml`.
+   **Alternatively, using uv:**
+   ```bash
+   uv sync
+   ```
+
+   Both methods will automatically install `ai-common` from GitHub as declared in `pyproject.toml`.

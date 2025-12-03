@@ -1,6 +1,8 @@
+from ai_common.file_operations import get_project_path
 from classify_images import classify_images
 
-img_dir = "/Users/nico/Documents/masters_in_ai/capstones/intropyproject-classify-pet-images/src/intropyproject_classify_pet_images/data/pet_images/"
+# Path to pet_images relative to project root
+img_dir = get_project_path("src/intropyproject_classify_pet_images/data/pet_images")
 
 
 def test_vgg(labels):
