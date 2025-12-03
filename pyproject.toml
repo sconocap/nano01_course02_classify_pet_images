@@ -1,0 +1,60 @@
+[project]
+name = "intropyproject-classify-pet-images"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Nico", email = "106677236+sconocap@users.noreply.github.com" }
+]
+requires-python = ">=3.14"
+dependencies = [
+    "ai-common",
+    "torchvision>=0.24.1",
+]
+
+[project.scripts]
+intropyproject-classify-pet-images = "intropyproject_classify_pet_images:main"
+
+[build-system]
+requires = ["uv_build>=0.9.11,<0.10.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "mypy>=1.18.2",
+    "pytest>=9.0.1",
+    "ruff>=0.14.6",
+    "taskipy>=1.14.1",
+]
+
+[tool.taskipy.tasks]
+
+# Checks
+lint = "uv run ruff check src"
+format = "uv run ruff format src"
+typecheck = "uv run mypy src"
+
+# Tests
+test = "uv run pytest"
+
+# Combined quick check
+check = "task lint && task typecheck && task test"
+
+[tool.pytest]
+minversion = "9.0"
+addopts = ["-s"]
+# Add the data directory to pythonpath so simple imports work in tests
+# This matches how scripts work when run directly
+pythonpath = [
+    "src/intropyproject_classify_pet_images/data",
+]
+testpaths = [
+    "tests",
+]
+
+[tool.pyright]
+# Configure Pyright/Pylance to use the same Python path as pytest
+# This allows Pylance to resolve imports like "calculates_results_stats"
+extraPaths = [
+    "src/intropyproject_classify_pet_images/data",
+]

@@ -1,0 +1,19 @@
+{
+    "python.testing.unittestEnabled": false,
+    "python.testing.pytestEnabled": true,
+    // === Generic editor suggestions (non-AI) ===
+    "editor.quickSuggestions": {
+        "other": true, // variable / symbol names etc.
+        "comments": true, // keep off if you want less noise
+        "strings": true
+    },
+    "editor.suggestOnTriggerCharacters": true, // e.g. "." in Python
+    "editor.suggest.showWords": true,
+    "editor.suggestSelection": "first",
+    // Optional: disable VS Code inline ghost text if you only want popup
+    "editor.inlineSuggest.enabled": false,
+    // === Python IntelliSense via Pylance ===
+    "python.languageServer": "Pylance",
+    "python.analysis.autoImportCompletions": true,
+    "python.analysis.completeFunctionParens": true
+}
