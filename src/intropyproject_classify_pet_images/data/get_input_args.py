@@ -58,6 +58,4 @@ def get_input_args():
         help="File containing list of valid breeds.",
     )
 
-    # Replace None with parser.parse_args() parsed argument collection that
-    # you created with this function
     return parser.parse_args()

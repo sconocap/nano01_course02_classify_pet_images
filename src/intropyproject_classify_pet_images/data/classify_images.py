@@ -22,6 +22,7 @@
 ##
 # Imports classifier function for using CNN to classify images
 import os
+
 from classifier import classifier
 
 

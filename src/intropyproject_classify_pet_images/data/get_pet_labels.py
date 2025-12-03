@@ -46,8 +46,6 @@ def get_pet_labels(image_dir):
       List. The list contains for following item:
          index 0 = pet image label (string)
     """
-    # Replace None with the results_dic dictionary that you created with this
-    # function
     file_list = listdir(image_dir)
     labels = list(map(strip_file_name, file_list))
     results_dic = {file: [label] for file, label in zip(file_list, labels)}
