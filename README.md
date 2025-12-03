@@ -1,10 +1,14 @@
 # Classify Pet Images
 
-Hello! Thank you for taking the time to review this capstone project. I appreciate your feedback and guidance.
+Hello Tutor! Thank you for taking the time to review this capstone project. I appreciate your feedback and guidance.
 
 ## About This Project
 
-This project implements a pet image classification system using deep learning models. Coming from a TypeScript background, I used this project to explore two concepts that are important to me:
+This projects is my section 8 project of course 02 *Introduction to Python for AI programmers*, which is part of the nanodegree *AI Programming with Python*.
+
+## Notes about my implementation of the project
+
+Coming from a TypeScript background, I used this project to explore two concepts that are important to me:
 
 1. **Test-Driven Development (TDD)**: I've included basic tests in this project to practice writing tests alongside the implementation. While the test coverage is modest, it represents my first steps in applying TDD principles in python.
 
